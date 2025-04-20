@@ -15,11 +15,17 @@ const decrementCounter=()=>{
     dispatch(action)
 }
 
+const stepChangHandler=({target:{value}})=>{
+    const action = {type:'newStep', value: Number(value)}
+    dispatch(action)
+}
+
   return (
     <>
     <div>Count: {count}</div>
     <button onClick={incrementCounter}>+</button>
     <button onClick={decrementCounter}>-</button>
+    <input type='number' value={step} onChange={stepChangHandler}/>
     </>
   )
 }
