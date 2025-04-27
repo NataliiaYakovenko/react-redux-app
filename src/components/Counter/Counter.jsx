@@ -37,3 +37,4 @@ const mapStateToProps = (state)=>{
 const withAccessToStore = connect(mapStateToProps)
 
 export default withAccessToStore(Counter)
+

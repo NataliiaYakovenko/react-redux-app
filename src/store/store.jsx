@@ -1,10 +1,9 @@
-import { legacy_createStore, applyMiddleware } from "redux";
-import { composeWithDevTools } from "@redux-devtools/extension";
-import counterReducer from "./reducer";
 
-const store = legacy_createStore(
-  counterReducer,
-  composeWithDevTools(applyMiddleware())
-);
+import counterReducer from "./reducer";
+import { configureStore } from "@reduxjs/toolkit";
+
+
+const store = configureStore({reducer:counterReducer})
+
 
 export default store
